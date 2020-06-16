@@ -37,28 +37,22 @@ message;
       localStorage.setItem('jwtToken',"qazwsxedc")
      
       
+      
       this.router.navigate(['/'])
+      .then(() => {
+        window.location.reload();
+      });
 
     }
       
       else
       {
       console.log("failed")
-      this.message = "Incorrect username or password"
-      this.toastmessage();
+     
       }
 
    
   }
-    // Get the snackbar DIV
-   toastmessage() {
-    var x = document.getElementById("snackbar");
-
-    // Add the "show" class to DIV
-    x.className = "show";
-  
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-  }
+ 
 
 }
