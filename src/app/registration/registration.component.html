@@ -1,0 +1,20 @@
+  
+      <div  class="row">
+  
+        <div *ngFor="let details of prod; let index=index;" class="col-lg-4 col-md-6 mb-4">
+         
+          <div  class="card h-100">
+          
+            <div class="card-body">
+              <h4 class="card-title">
+               {{details.name}}
+              </h4>
+              <h5>{{details.uniqueid}}</h5>
+              
+            </div>
+            <button  class="btn btn-primary" (click) = "processdata(details.name,details.uniqueid);">Approve</button>
+          </div>
+        </div>
+        
+      </div>
+  
